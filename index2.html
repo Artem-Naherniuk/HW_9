@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 40%;
+            margin: 200px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+        }
+        .allItems{
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #badWord{
+            width: 65%;
+            border-radius: 5px;
+            border: 1px solid gainsboro;
+        }
+        .buttons{
+            width: 15%;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+        #text{
+            width: 99%;
+            resize: none;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        #cenzor{
+            width: 100%;
+            background-color: rgb(94, 205, 50);
+        }
+        button{
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+        .alertInvisible{
+            width: 35%;
+            height: 110px;
+            border: 1px solid red;
+            border-radius: 7px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 40%;
+            left: 32%;
+            background-color: white;
+            visibility: hidden;
+        }
+        .alertVisible{
+            width: 35%;
+            height: 110px;
+            border: 1px solid red;
+            border-radius: 7px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            position: absolute;
+            top: 40%;
+            left: 32%;
+            background-color: white;
+            color: red;
+        }
+        .lowOpacity{
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div style="width: 100%; margin-bottom: 20px;">
+            <span id="textName"><b>Bad words:</b></span>
+            <span id="badWordText" style="color: red;"></span>
+        </div>
+        <form name="frm" class="allItems" style="width: 100%; margin-bottom: 20px;">
+            <input id="badWord" type="text" name="badWord"  placeholder="Write bad word">
+            <input type="button" class="buttons" id="add" name="add" style="background-color: orange;" value="Add">
+            <input type="button" class="buttons" id="reset" name="reset" style="background-color: orangered;" value="Reset">
+        </form>
+        <form name="frmTwo" style="width: 100%;">
+            <textarea id="text" name="text" cols="30" rows="10"></textarea>
+            <input type="button" class="buttons" id="cenzor" value="cenzor">
+        </form>
+    </div>
+
+    <div class="alertInvisible" id="alert">
+        <span id="alertText" style="margin-bottom: 10px;"></span>
+        <button id="close">close</button>
+    </div>
+    
+
+    <script src="./main2.js"></script>
+</body>
+</html>
